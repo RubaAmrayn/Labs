@@ -1,0 +1,39 @@
+body {
+       background-image: url(c.jpeg);
+        font-size: 48px;
+        line-height: 1.5;
+       clear: both;
+       text-align: justify;
+    text-transform: uppercase
+      }
+article, aside, footer, header, menu, nav, section {
+    display: block;
+}  
+nav{
+    float: right;
+    padding: 10px;
+    background: #eef;
+    display: inline-block
+}
+article, section{
+    background: #eef;
+    margin: 20px auto;
+        text-align: center
+}
+
+div{
+    font-family: 'Tangerine', serif;
+   background: #eef;
+    text-align: center
+}
+h1{
+     font-family: 'Srisakdi', cursive;   
+    background: #eef;
+    text-align: center
+}
+.h1{
+    
+font-family: 'Laila', serif;
+    background: #eef;
+    text-align: center
+}

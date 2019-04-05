@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>lab6</title>   
+ </head>
+ <body>
+    <table id="table01_id">
+    <tr id="header01_id">
+    <th></th>
+    <th>Sunday</th>
+    <th>Monday</th>
+    <th>Tueday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    </tr>
+    <tr id="row011_id">
+    <td>08-10</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+    <tr id="row012_id">
+    <td>13-15</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+    </table>
+    <script>
+        
+        arr = [["Math", "Physics", "Math","Science","Programming"],
+                   ["Programming", "Databases", "web Developemnt","Networks","Sport"]],
+        
+                  table=document.getElementById("table01_id");
+        
+        for(var i=1;i<table.rows.length;i++)
+            {
+                for(var j=1;j<table.rows[i].cells.length;j++)
+                    {
+                        table.rows[i].cells[j].innerHTML=arr[i-1][j-1];
+                       
+                    }
+            }
+                        table.rows[1].cells[2].bgColor = "#ffcccc"; 
+                        table.rows[1].cells[4].bgColor = "#ffcccc"; 
+                        table.rows[2].cells[1].bgColor = "sky blue"; 
+                        table.rows[2].cells[3].bgColor = "sky blue"; 
+                        table.rows[2].cells[5].bgColor = "sky blue"; 
+            
+    </script>
+          
+ </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>lab7-1</title>   
+ </head>
+ <body>
+   <form action="#" onsubmit="return false; " >
+<input ID="num" type="tel" name="num" value="966" >
+ <input name="Button1" onclick="mobail('num');" type="submit" value="أضغط هنا للتحقق"  />
+ 
+ </form>  
+    <form>
+        <select id="mySelect">
+          <option>السعوديه</option>
+          <option>باكستان</option>
+          <option>تركيا</option>
+        </select>
+     </form>
+    <script>
+       function mobail(ID){
+
+
+var che  = document.getElementById(ID).value
+
+var ksa = /^966[0-9]{9}$/;
+    if(!che.match(ksa)){
+    alert("يجب ان يكون بهذه الصيغة 9665\n يجب ان يكون 9 ارقام\n من فضلك لا تتجاوز 11 رقم");
+    return false;
+    }else{
+    alert('تم الارسال بنجاح شكرا لك ..');
+    return true;
+    }
+}
+
+    </script>
+ </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

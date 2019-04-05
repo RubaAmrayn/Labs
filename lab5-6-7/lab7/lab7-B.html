@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Insert title here</title>
+
+    <style type="text/css">
+
+        label {
+
+            width: 80px;
+
+            display: inline-block;
+
+            margin: 2px;
+
+        }
+
+ 
+
+        input {
+
+            width: 150px;
+
+            margin: 2px;
+
+        }
+
+ 
+
+        select {
+
+            width: 154px;
+
+            margin: -2px;
+
+        }
+
+</style>
+
+</head>
+
+<body>
+
+    <form action="page.jsp" name="myForm" onsubmit="return validate()">
+
+        <fieldset>
+
+           <legend>Personal information:</legend>
+
+            <label for="Name">Name:</label><input type="text" name="Name" id="name" required/> <br>
+
+            <label for="EMail">EMail:</label><input type="text" name="EMail" id="email" required/> <br>
+
+            <label for="Zip">Zip Code:</label><input type="text" name="Zip" id="zip"/> <br>
+
+            <label for="Country">Country:</label>
+
+            <select name="Country" id="country">
+
+                <option value="-1" selected>[choose yours]</option>
+
+                <option value="ksa">KSA</option>
+
+                <option value="oman">OMAN</option>
+
+                <option value="usa">USA</option>
+
+            </select> <br> <br>
+
+            <input type="submit" value="Submit" /> <br>
+
+        </fieldset>
+
+    </form>
+
+ 
+
+    <script type="text/javascript">
+
+        function validate(){
+
+                  var name = document.getElementById('name').value;
+
+            var email = document.getElementById('email').value;
+
+            var zip = document.getElementById('zip').value;
+
+            var country = document.getElementById('country').value;
+
+           
+
+            var nameRGEX = /^[a-zA-Z][\w]*$/;
+
+            var emailRGEX = /^[\w]*@(\w|\.)*[a-zA-Z]{2,3}$/;
+
+            var KSAOmanRGEX = /^[0-9]{5}$/;
+
+            var USARGEX = /^[0-9]{1,2}$/;
+
+   
+
+            if(name == ""){
+
+                alert("The name field should not be left empty!");
+
+                return false;
+
+            }
+
+            if(email == ""){
+
+                alert("The e-mail field should not be left empty!");
+
+                return false;
+
+            }
+
+ 
+
+            var nameResult = nameRGEX.test(name);
+
+            var emailResult = emailRGEX.test(email);
+
+ 
+
+            if(!nameResult){
+
+                alert("The name is invalid");
+
+                return false;
+
+            }
+              if(!emailResult){
+
+                            alert("The email is invalid");
+
+                            return false;
+
+            }
+
+ 
+
+            var zipResult = false;
+
+            if(country == "ksa" || country == "oman"){
+
+                zipResult = KSAOmanRGEX.test(zip);
+
+            }else if(country = "usa"){
+
+                zipResult = USARGEX.test(zip);
+
+            }
+
+ 
+
+                  if(!zipResult){
+
+                            alert("The zip code is invalid");
+
+                            return false;
+
+            }
+            alert("Successfully")
+
+              }
+
+ 
+
+    </script>
+
+ 
+
+ 
+
+</body>
+
+</html>
