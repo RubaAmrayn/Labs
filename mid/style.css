@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0
+}
+
+header .navbar {
+    background-color: #272C31; 
+    color: #fff; 
+    overflow: hidden;
+    width:100% ;
+    padding: 0 13px;
+}
+
+header .navbar h3 {
+    float: left;
+    text-transform: uppercase;
+    position: absolute;
+    left:2%;
+    align-content: center;
+    font-size: 40px;
+    margin: 12px 45px
+}
+header .navbar h3 span {
+    color: #00B48B
+}
+header .navbar .nav-content{
+    padding-right: 2%;
+    float: right;
+}
+
+header .navbar ul {
+    list-style: none;     
+    overflow: hidden;
+}
+
+header .navbar ul li {
+    float: left; 
+    padding: 10px
+}
+
+header .navbar ul li a {
+    color: #FFF;
+    text-decoration: none;
+    
+}
+header .navbar ul li.active a,
+header .navbar ul li a:hover {
+    color:#00B48B 
+}
+
+#banner-img {
+    width:100%; 
+    max-height:350px;
+    max-height:350px;
+}
+.sec{
+    margin: 37px 0
+}
+h2{
+    font-size: 50px;
+    text-align: center
+}
+p{
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold
+}
+h1{
+    font-size: 25px;
+    text-align: center
+}
+article img{
+    border-style: solid; 
+    border-width: 2px;
+    margin:auto 38%;
+}
+article h5{
+    font-size: 25px;
+    text-align: center;
+}
+article a{
+ text-decoration: none;
+}
+
+.footer {
+    background-color: #121417;
+    color: #71767D;
+    padding: 20px 13px;
+    text-align: center;
+    overflow: hidden;
+    width:100%;
+}
+
+.footer span {
+    float: left;
+    padding-left:2%;
+}
