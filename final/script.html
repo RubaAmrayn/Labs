@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p>Please enter your age:</p>
+
+    <input id="numb">
+
+    <button type="button" onclick="myFunction()">Submit</button>
+
+    <script>
+        function myFunction() {
+            var x;
+          
+            // Get the value of the input field with id="numb"
+            x = document.getElementById("numb").value;
+           var num = /^\d+$/;
+           
+            if (x.length == 0) {
+                alert('لا يجب ان يترك الحقل فارغا');
+                return false;
+            }
+            if (num.test(x)) {
+                if (x < 12) {
+                    alert('للاسف مازلت صغيرا');
+                    return false;
+                }
+
+                else {
+                    alert('تم شراء الكتاب بنجاح شكرا لك..');
+                    return true;
+                }
+            }else{
+                alert('يجب ان يكون العمر ارقام فقط')
+            }
+
+
+        }
+    </script>
+
+</body>
+
+</html>
